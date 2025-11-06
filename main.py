@@ -35,19 +35,19 @@
 #     Tabs[page].app()
 
 
-hide_github_icon = """
-    <style>
-    #GithubIcon {
-        visibility: hidden;
-    }
-    </style>
-    """
-    st.markdown(hide_github_icon, unsafe_allow_html=True)
+# hide_github_icon = """
+#     <style>
+#     #GithubIcon {
+#         visibility: hidden;
+#     }
+#     </style>
+#     """
+#     st.markdown(hide_github_icon, unsafe_allow_html=True)
 import streamlit as st
 from web_functions import load_data
 from Tabs import diagnosis, home, result, kc, talk2doc
 
-------------------- Page Configuration -------------------
+# ------------------- Page Configuration -------------------
 st.set_page_config(
     page_title='Diabetes Prediction System',
     page_icon='🥯',
@@ -55,7 +55,7 @@ st.set_page_config(
     initial_sidebar_state='auto'
 )
 
-------------------- Hide Default Streamlit UI Elements -------------------
+# ------------------- Hide Default Streamlit UI Elements -------------------
 hide_streamlit_style = """
     <style>
     /* Hide the default Streamlit menu, footer, header, and deploy buttons */
@@ -69,7 +69,7 @@ hide_streamlit_style = """
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-------------------- Define Tabs -------------------
+# ------------------- Define Tabs -------------------
 Tabs = {
     "Home": home,
     "Ask Queries": talk2doc,
@@ -78,15 +78,15 @@ Tabs = {
     "Knowledge Center": kc
 }
 
-------------------- Sidebar Navigation -------------------
+# ------------------- Sidebar Navigation -------------------
 st.sidebar.title('Navigation')
 page = st.sidebar.radio("Page", list(Tabs.keys()))
 st.sidebar.info('Made with 💙 by Gagan')
 
-------------------- Load Data -------------------
+# ------------------- Load Data -------------------
 df, X, y = load_data()
 
-------------------- Page Rendering -------------------
+# ------------------- Page Rendering -------------------
 if page == "Diagnosis":
     Tabs[page].app(df, X, y)
 else:
@@ -96,7 +96,7 @@ import streamlit as st
 from web_functions import load_data
 from Tabs import diagnosis, home, result, kc, talk2doc
 
-------------------- Page Configuration -------------------
+# ------------------- Page Configuration -------------------
 st.set_page_config(
     page_title='Diabetes Prediction System',
     page_icon='🥯',
@@ -104,7 +104,7 @@ st.set_page_config(
     initial_sidebar_state='auto'
 )
 
-------------------- Hide Default Streamlit UI Elements -------------------
+# ------------------- Hide Default Streamlit UI Elements -------------------
 hide_streamlit_style = """
     <style>
     /* Hide the default Streamlit menu, footer, header, and deploy buttons */
@@ -118,7 +118,7 @@ hide_streamlit_style = """
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-------------------- Define Tabs -------------------
+# ------------------- Define Tabs -------------------
 Tabs = {
     "Home": home,
     "Ask Queries": talk2doc,
@@ -127,15 +127,15 @@ Tabs = {
     "Knowledge Center": kc
 }
 
-------------------- Sidebar Navigation -------------------
+# ------------------- Sidebar Navigation -------------------
 st.sidebar.title('Navigation')
 page = st.sidebar.radio("Page", list(Tabs.keys()))
 st.sidebar.info('Made with 💙 by Gagan')
 
-------------------- Load Data -------------------
+# ------------------- Load Data -------------------
 df, X, y = load_data()
 
-------------------- Page Rendering -------------------
+# ------------------- Page Rendering -------------------
 if page == "Diagnosis":
     Tabs[page].app(df, X, y)
 else:
