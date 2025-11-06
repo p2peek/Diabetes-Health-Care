@@ -10,6 +10,14 @@ st.set_page_config(
     layout = 'wide',
     initial_sidebar_state = 'auto'
 )
+hide_github_icon = """
+    <style>
+    #GithubIcon {
+        visibility: hidden;
+    }
+    </style>
+    """
+    st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 Tabs = {
     "Home":home,
