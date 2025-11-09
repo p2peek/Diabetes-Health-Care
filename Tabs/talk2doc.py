@@ -24,7 +24,8 @@ def ask_gemini(query):
     """
 
     # model = genai.GenerativeModel("gemini-1.5-flash")
-    model = genai.GenerativeModel("gemini-pro")
+    # model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("gemini-1.5-flash")
     response = model.generate_content(prompt)
     
     return response.text
